@@ -1,43 +1,75 @@
-# Laravel Multiple Authentication
-A simple implementation of multiple authentication in Laravel.
+<p align="center"><img src="public/images/logo.png"></p>
 
-To follow along, this application has been documented as an article on Pusher blog. You can read about it [here](https://pusher.com/tutorials/multiple-authentication-guards-laravel)
+[![pipeline status](https://gitlab.com/alex-control/alex-control-web-application/badges/develop/pipeline.svg?style=flat-square)](https://gitlab.com/alex-control/alex-control-web-application/commits/develop)
+[![Coverage report](https://gitlab.com/alex-control/alex-control-web-application/badges/develop/coverage.svg?job=coverage)](https://gitlab.com/alex-control/alex-control-web-application/pipelines/latest)
 
-## Set up
-To set up this project, first clone the repositiory
+## About Tebibe .. 
+This project is about creating a web application for Medical Appintemnt for the algerian community ..
+
+NOTE: 
+NEVER WORK ON MASTER BRANCH FOLLOW THE DOCS BELOW  ... 
+## Quick Start :
 ```bash
-$ git clone https://github.com/fisayoafolayan/laravel-multiple-auth.git
-```
+# clone the repo 
+git clone https://github.com/salhi197/tebibe.git
 
-Change your working directory into the project directory
-```bash
-$ cd laravel-multiple-auth
-```
+#move to the folder 
+cd tebibe
 
-Then install dependencies using [Composer](https://getcomposer.org/doc/00-intro.md)
-```bash
-$ composer install
-```
+# Install Dependencies
+composer install
 
-Copy `.env.example` to `.env`
-```bash
-$ cp .env.example .env
-```
+# swith branch - must do this
+git checkout develop
 
-Create the database file
-```bash
-$ touch database/database.sqlite
-```
+#copy .env.exmple to .env
+cp .env.example .env
 
-## Run
-Run the application with the following command
-```bash
-$ php artisan serve
-```
+#open the .env file change the DB_PASSWORD based on yout DB password 
+DB_PASSWORD=root
 
-Remember to visit `http://localhost:8000/register/writer` and `http://localhost:8000/register/admin` to register writers and admins respectively. Then visit `http://localhost:8000/login/writer` and `http://localhost:8000/login/admin` to login the writers and admins respectively.
+#create a new DB in phpmyadmin called tebibe
+go to your phpmyadmin panel and create a db called tebibe
 
-## Built With
-[Laravel](https://laravel.com/) - The PHP Framework For Web Artisans.
+#generer la clé 
+php artisan key:generate
 
-[SQLite](https://en.wikipedia.org/wiki/SQLite) - A relational database management system.
+# Run Migrations
+php artisan migrate
+
+# If you get an error about an encryption_key
+php artisan key:generate
+
+# run the server 
+php artisan serve
+
+#create a medecin or an admin or a user so you can test the app 
+127.0.0.1:8000/register/[admin|user|medecin]
+``````
+
+
+## Supported Languages
+* French
+
+
+## Documentation & Blog
+*  The Blog for the Alex-control is located [Here].
+
+## Prerequisites
+* Composer: 1.9.1 or higher.
+* PHP version >=7.3 
+* MARIADB >= 10.3
+* APACHE
+* MOD_REWRITE
+* PHP Extensions cURL & mCrypt should be enabled
+* PHP GD Extension
+* PHP ZIP Extension
+* PHP settings allowurlfopen enabled
+* PHP JSON Support
+* PHP XML Support
+* PHP OpenSSL
+
+## Co-founders
+Mohamed redha & Haider Ali
+## License
+Tebibe is not open-sourced .

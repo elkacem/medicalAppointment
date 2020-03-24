@@ -40,3 +40,15 @@ Route::group(['middleware' => 'auth:medecin'], function () {
     
 });
 
+
+/**
+ * les routes pour rendez-vous
+ */
+Route::group(['prefix' => 'rendezvous', 'as' => 'rendezvous'], function () {
+    Route::get('/', ['as' => '.index', 'uses' => 'RendezvousController@index']);
+    Route::post('/create', ['as' => '.create', 'uses' => 'RendezvousController@store']);
+    Route::get('/show/create',['as'=>'.show.create', 'uses' => 'RendezvousController@create']);
+    Route::get('/delete/{id_offre}', ['as' => '.delete', 'uses' => 'RendezvousController@destroy']);
+    Route::post('/update/{id_offre}', ['as' => '.update', 'uses' => 'RendezvousController@update']);
+    Route::get('/show/{id_offre}', ['as' => '.show', 'uses' => 'RendezvousController@show']);
+});
