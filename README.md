@@ -11,10 +11,10 @@ NEVER WORK ON MASTER BRANCH FOLLOW THE DOCS BELOW  ...
 ## Quick Start :
 ```bash
 # clone the repo 
-git clone https://github.com/salhi197/tebibe.git
+git clone https://github.com/salhi197/medicalAppointment.git
 
 #move to the folder 
-cd tebibe
+cd medicalAppointment
 
 # Install Dependencies
 composer install
@@ -70,6 +70,6 @@ php artisan serve
 * PHP OpenSSL
 
 ## Co-founders
-Mohamed redha & Haider Ali
+Corona Team *_*
 ## License
 Tebibe is not open-sourced .
